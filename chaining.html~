@@ -1,0 +1,11 @@
+<!--Make a Calculation object which will have 3 functions first(),second() and sum().
+    All these function should called by chain method-->
+
+<!DOCTYPE html>
+<html>
+    <body>
+		<!--source to js file -->
+		<script src="/home/bridgeit/Documents/suyash/chaining.js">
+		</script>
+   	</body>
+</html>

@@ -1,0 +1,9 @@
+<!--function to print all the parts of URL-->
+<!DOCTYPE html>
+<html>
+    <body>
+		<!--source to js file -->
+		<script src="/home/bridgeit/Documents/suyash/printurl.js">
+		</script>
+   	</body>
+</html>

@@ -1,0 +1,22 @@
+<!--program to count the number of links in a document -->
+<!DOCTYPE html>
+<html>
+   <body>
+	<p id="demo"></p>
+	<a href="setOperations.html">first link</a></br>
+	<a href="chaining.html">second link</a></br>
+	<a href="setOperations.js">third link</a></br>
+	<a href="printurl.html">fourth link</a></br>
+	<a href="printurl.js">fifth link</a>
+		<script>
+		function callLinks()
+		{
+			var a = document.links.length;
+			document.getElementById("demo").innerHTML = a;
+			return a;
+		}
+		var rslt = callLinks();
+		alert("number of links are = "+rslt);
+	</script>
+    </body>
+</html>

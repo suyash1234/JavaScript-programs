@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+//implementation of hash table
+var HashFunction=function(key,value)
+{
+	this.key = key;
+	this.value = value;
+	this.nextEntry = undefined;
+};
+//using hash function prototype to set and get values
+HashFunction.prototype={
+	getKey : function(){
+	return this.key;
+	},
+	getValue : function(){
+	return this.value;
+	},
+	setNext : function(entry){
+	this.nextEntry=entry;
+	},
+	getNext : function(){
+	return this.nextEntry;
+	}
+	};
+var HashTable = function()
+{
+	this.tableSize=50;
+	this.table=[];
+};
+HashTable.prototype={
+	hashfunc : function(input){
+	return input % this.tableSize;
+	},
+	get : function(key){
+	var hash = this.hashfunc(key);
+	var table = this.table;
+	var temp = table[hash];
+	if(temp===undefined)
+		return null;
+	if(temp.getKey()==key)
+	{
+		return temp.getValue();
+	}
+	else
+	{
+		while(temp.getNext()!==undefined)
+		{
+			temp=temp.getNext();
+			if(temp.getKey() === key) {
+           		return temp.getValue();
+         		}
+		}
+	}
+	},
+	put : function(key,value){
+	var hash=this.hashfunc(key);
+	var table=this.table;
+	if(table[hash]===undefined){
+	table[hash] = new HashFunction(key,value)
+	}
+	else{
+	var temp = table[hash];
+	while(temp.getNext()!==undefined)
+	{
+		temp=temp.getNext();
+		if(temp.getKey() === key)
+		{
+           		return temp.getValue();
+         	}	 
+	}
+	temp.setNext(new HashFunction(key,value)) 
+	}
+	},
+};
+var hashTable=new HashTable();
+hashTable.put(1,"suyash");
+hashTable.put(2,"yash");
+hashTable.put(3,"Nanda");
+document.write(hashTable.get(1)"</br>");
+document.write(hashTable.get(2)"</br>");
+document.write(hashTable.get(3)"</br>");
+</script>
+</body>
+</html>
