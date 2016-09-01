@@ -1,4 +1,8 @@
+/*  @Author : Suyash Nanda
+    @Date : 29 aug 2016
+	@Purpose: function to print all the parts of URL*/
 function callURL() {
+	//using window oblect to print reference ,host name , protocol
     var ref = location.href;
     document.write("ref is = "+ref+"</br>");
     var host = location.hostname;

@@ -1,4 +1,6 @@
-<!--program for adding rows and columns  -->
+<!--@Author : Suyash Nanda
+    @Date : 25 aug 2016
+	@Purpose: Program for adding rows and columns  -->
 <!DOCTYPE html>
 <html>
     <body>
@@ -14,6 +16,7 @@
 		<!--calling the functions when we click on the button -->
 		<button onclick="myCol()">Add Column</button>
 		<button onclick="myRow()">Add Row</button>
+		<!--path to js file-->
 		<script src="/home/bridgeit/Documents/suyash/addrows.js">
 		</script>
 	</body>

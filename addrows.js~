@@ -2,14 +2,14 @@
 function myCol()
 {
 	var col = document.getElementById("myrow");
-    var x = col.insertCell(-1);
+    var x = col.insertCell(-1);//insert column in a row
     x.innerHTML = "New cell";
 }
 //function for adding row
 function myRow() 
 {
 	var row = document.getElementById("mytable");
-	var y = row.insertRow(-1);
+	var y = row.insertRow(-1);//insert row in the last
 	var cell1 = y.insertCell(0);
 	var cell2 = y.insertCell(1);
 	var cell3 = y.insertCell(2);

@@ -1,57 +1,58 @@
-<!--A simple calculator using java script -->
+<!--@Author : Suyash Nanda
+    @Date : 25 aug 2016
+	@Purpose: Program of a simple arithmetic calculator  -->
 <!DOCTYPE html>
 <html>
     <body>
         <script>
-	//make a function named myFunction
-	function myfunction()
-	{
-	//store the values of forms in different variables
-	    var s;
-	    var x=parseInt(document.forms["calfunction"]["firstnum"].value);
-	    var y=parseInt(document.forms["calfunction"]["secondnum"].value);
-	    var z=parseInt(document.getElementById("num").value);
-	//use switch case to choose particular case
-	    switch(z)
-	    {
-		case 1:
-		s = x + y;
-		alert("Result is :" +s);
-		break;
-
-		case 2:
-		s = x - y;
-		alert("Result is :" +s);
-		break;
-
-		case 3:
-		s = x * y;
-		alert("Result is :" +s);
-		break;
-
-		case 4:
-		s = x / y;
-		alert("Result is :" +s);
-		break;
-
-		default:
-		document.write("wrong operation");		
-	   } 
+		//make a function named myFunction
+		function myfunction()
+		{
+		//store the values of forms in different variables
+	    	var s;
+	    	var x=parseInt(document.forms["calfunction"]["firstnum"].value);//store first value in variable x
+	    	var y=parseInt(document.forms["calfunction"]["secondnum"].value);//store second value in variable y
+	    	var z=parseInt(document.getElementById("num").value);//store an operation choosen from user in z
+		//use switch case to choose particular case
+	    	switch(z)
+	    	{
+				case 1:
+				s = x + y;
+				alert("Result is :" +s);
+				break;
 	
+				case 2:
+				s = x - y;
+				alert("Result is :" +s);
+				break;
+
+				case 3:
+				s = x * y;
+				alert("Result is :" +s);
+				break;
+
+				case 4:
+				s = x / y;
+				alert("Result is :" +s);
+				break;
+
+				default:
+				document.write("wrong operation");		
+	   		} 
       }
-	</script>
-	<!--make aform which onsubmit returns myFunction -->
+		</script>
+		<!--make aform which onsubmit returns myFunction -->
         <form name="calfunction" method="post" onsubmit="return myfunction()">
-	First no.&nbsp&nbsp&nbsp&nbsp&nbsp<input type="text" name="firstnum" size=10 required></br></br>
-	Second no. <input type="text" name="secondnum" size=10 required></br></br>
-	<select id="num">
-	<option>......Select Operation....</option>
-	<option value="1"> 1.Addition </option>
-	<option value="2"> 2.Subtraction </option>
-	<option value="3"> 3.Multiplication </option>
-	<option value="4"> 4.Division </option>
-	</select></br></br>
-	<input type="submit" value="Calculate"></br></br>
-	</form>
+		First no.&nbsp&nbsp&nbsp&nbsp&nbsp<input type="text" name="firstnum" size=10 required></br></br>
+		Second no. <input type="text" name="secondnum" size=10 required></br></br>
+		<select id="num">
+		<option>......Select Operation....</option>
+		<option value="1"> 1.Addition </option>
+		<option value="2"> 2.Subtraction </option>
+		<option value="3"> 3.Multiplication </option>
+		<option value="4"> 4.Division </option>
+		</select></br></br>
+		<input type="submit" value="Calculate"></br></br>
+		</form>
      </body>
 </html>

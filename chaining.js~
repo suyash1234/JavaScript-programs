@@ -1,5 +1,7 @@
-/*Make a Calculation object which will have 3 functions first(),second() and sum().
-    All these function should called by chain method*/
+/*@Author : Suyash Nanda
+    @Date : 26 aug 2016
+	@Purpose: Make a Calculation object which will have 3 functions first(),second() and sum().
+              All these function should called by chain method  -->*/
 var Calculation = {
 	num1 : 0,
 	num2 : 0,

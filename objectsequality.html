@@ -1,28 +1,29 @@
-<!--program of making a function to check equality of two objects-->
- -->
-<!DOCTYPE html>
+<!--@Author : Suyash Nanda
+    @Date : 27 aug 2016
+	@Purpose: program of making a function to check equality of two objects -->
+ <!DOCTYPE html>
 <html>
     <body>
         <script>
-	//making 3 objects for equality
-	var object1 = {Name : "suyash", Age : 22, Address : "Mumbai"};
-	var object2 = {Name : "yash", Age : 25, Address : "Mumbai"};
-	var object3 = object1;
-	document.write(equality(object1,object2));
-	document.write("</br>");
-	document.write(equality(object1,object3));
-//function to check equality of two objects
-	function equality(obj1,obj2)
-	{
-	    if(obj1===obj2)
-	    {
-		return true;
-	    }
-	    else
-	    {
-		return false;
-	    }
-	}
+		//making 3 objects for equality
+		var object1 = {Name : "suyash", Age : 22, Address : "Mumbai"};
+		var object2 = {Name : "yash", Age : 25, Address : "Mumbai"};
+		var object3 = object1;
+		document.write(equality(object1,object2));
+		document.write("</br>");
+		document.write(equality(object1,object3));
+		//function to check equality of two objects
+		function equality(obj1,obj2)
+		{
+		    if(obj1===obj2)//(===) compares values as well as type of objects
+		    {
+				return true;
+		    }
+		    else
+		    {
+				return false;
+	    	}
+		}
 	   </script>
     </body>
 </html>

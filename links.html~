@@ -1,4 +1,6 @@
-<!--program to count the number of links in a document -->
+<!--@Author : Suyash Nanda
+    @Date : 27 aug 2016
+	@Purpose: program to count the number of links in a document-->
 <!DOCTYPE html>
 <html>
    <body>
@@ -17,6 +19,6 @@
 		}
 		var rslt = callLinks();
 		alert("number of links are = "+rslt);
-	</script>
+	    </script>
     </body>
 </html>

@@ -1,4 +1,6 @@
-<!--function to print all the parts of URL-->
+<!--@Author : Suyash Nanda
+    @Date : 29 aug 2016
+	@Purpose: function to print all the parts of URL -->
 <!DOCTYPE html>
 <html>
     <body>

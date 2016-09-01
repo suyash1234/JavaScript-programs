@@ -1,71 +1,76 @@
+<!--@Author : Suyash Nanda
+    @Date : 26 aug 2016
+	@Purpose: Hash table implementation using JS Prototype-->
 <!DOCTYPE html>
 <html>
     <body>
         <script>
 	//make a class HashEntry
-	var HashEntry = function(key, value) {
-    	    this.key = key;
-            this.value = value;
-    	    this.nextEntry = undefined;
+		var HashEntry = function(key, value) {
+    		this.key = key;
+        	this.value = value;
+    		this.nextEntry = undefined;
     	};
 	//make various methods of HashEntry using prototypes
-	HashEntry.prototype = {
-  	getKey : function() {
-    	    return this.key;
-  	},
-  	getValue : function() {
-    	    return this.value;  
-  	},
-  	setNext : function(entry) {
-    	    this.nextEntry = entry;
-  	},
-  	getNext : function() {
-    	    return this.nextEntry;
-  	}
-	};
+		HashEntry.prototype = {
+  			getKey : function() {
+    		return this.key;
+  			},
+  			getValue : function() {
+    		return this.value;  
+  			},
+  			setNext : function(entry) {
+    		this.nextEntry = entry;
+  			},
+  			getNext : function() {
+    		return this.nextEntry;
+  			}
+		};
 	//make another class HashTable
-	var HashTable = function(){
-  	    this.tableSize = 100;
-  	    this.table = []; //this will be holding HashEntry(s)
-	};
+		var HashTable = function(){
+  	    	this.tableSize = 100;
+  	    	this.table = []; //this will be holding HashEntry(s)
+		};
 	//make various methods of HashTable using prototypes
-	HashTable.prototype = {
-  	hashFunction: function(input) {
-    	//return an hash
-    	    return input % this.tableSize;
-  	},
-  	put : function(key, value) {
-    	    var hash = this.hashFunction(key);
-    	    var table = this.table;
-    	    if(table[hash] === undefined) {
-       	    table[hash] = new HashEntry(key, value);
-    	}
-	else {
-            var temp = table[hash];
-       	    while(temp.getNext()!==undefined) {
-            temp = temp.getNext();
-            }
-       	    temp.setNext(new HashEntry(key, value));
-    	}
-  	},
-  	get : function(key) {
-     	    var hash = this.hashFunction(key);
-     	    var table = this.table;
-     	    var temp = table[hash];
-     	    if(temp === undefined) return null;
-     	    if(temp.getKey() === key) {
-       	       return temp.getValue();
-     	    }
-	 else {
-       	 while(temp.getNext()!==undefined) {
-         temp = temp.getNext();
-         if(temp.getKey() === key) {
-             return temp.getValue();
-         } 
-         }
-     	 }
-  	 }
-	 };
+		HashTable.prototype = {
+  			hashFunction: function(input) {
+    		//return an hash
+    			return input % this.tableSize;
+  			},
+			//function to put key and value
+  			put : function(key, value) {
+    			var hash = this.hashFunction(key);
+    			var table = this.table;
+    			if(table[hash] === undefined) {
+       			table[hash] = new HashEntry(key, value);
+    			}
+				else {
+            	var temp = table[hash];
+       	    	while(temp.getNext()!==undefined) {
+            	temp = temp.getNext();
+            	}
+       	    	temp.setNext(new HashEntry(key, value));
+    			}
+  			},
+			//function to get key
+  			get : function(key) {
+     	    	var hash = this.hashFunction(key);
+     	    	var table = this.table;
+     	    	var temp = table[hash];
+     	    	if(temp === undefined) return null;
+     	    	if(temp.getKey() === key) {
+       	    	   return temp.getValue();
+     	    	}
+	 			else {
+       	 		while(temp.getNext()!==undefined) {
+         			temp = temp.getNext();
+         			if(temp.getKey() === key) {
+             			return temp.getValue();
+         			} 
+         		}
+     	 		}	
+  	 		}
+	 	};
 //make a object hashTable of class HashTable
 var hashTable = new HashTable();
 hashTable.put(1,"suyash");

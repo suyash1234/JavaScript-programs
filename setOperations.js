@@ -1,19 +1,22 @@
-//function to calculate union of two set
+/*  @Author : Suyash Nanda
+    @Date : 29 aug 2016
+	@Purpose:function to calculate union of two set*/
 function unionArray(arrayA, arrayB) {
+//creating object obj
 	var obj = {},
     i = arrayA.length,
     j = arrayB.length,
     newArray = [];
   	while (i--) {
     	if (!(arrayA[i] in obj)) {
-      	obj[arrayA[i]] = true;
-      	newArray.push(arrayA[i]);//adding elements of arrayA
+      		obj[arrayA[i]] = true;
+      		newArray.push(arrayA[i]);//adding elements of arrayA
     	}
   	}
   	while (j--) {
     	if (!(arrayB[j] in obj)) {
-      	obj[arrayB[j]] = true;
-      	newArray.push(arrayB[j]);//adding elements of arrayB
+      		obj[arrayB[j]] = true;
+      		newArray.push(arrayB[j]);//adding elements of arrayB
     	}
   	}
   	return newArray;
