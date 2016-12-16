@@ -1,9 +1,0 @@
-<!--program for calculating union , intersection and difference -->
-<!DOCTYPE html>
-<html>
-    <body>
-		<!--source to js file -->
-		<script src="/home/bridgeit/Documents/suyash/setOperations.js">
-		</script>
-   	</body>
-</html>
